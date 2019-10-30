@@ -1,0 +1,29 @@
+<html>
+
+    <head>
+
+        <title> Form: Add New Property </title>
+
+    </head>
+
+    <body>
+
+        <h1>Add New Property </h1>
+
+        <form action="http://localhost:5000/addNewProperty" method="post">
+
+            <input type="text" name="name" id="" placeholder="Property name">
+
+            <input type="text" name="type" id="" placeholder="Property type">
+
+            <input type="number" name="price" id="" placeholder="Property price">
+
+            <button type="submit">Submit</button>
+
+        </form>
+
+        <p><a href = "{{url_for('getProperties')}}">View Properties</a></p>
+        <p><a href = "{{url_for('getMyAccount')}}">View Account</a></p>
+    </body>
+
+</html>
