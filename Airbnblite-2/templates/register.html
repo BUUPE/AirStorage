@@ -1,0 +1,29 @@
+
+
+{% extends "base.html" %}
+
+{% block body %}
+
+<body>
+
+        <form action="http://localhost:5000/register" method="post">
+
+            <input type="text" name="username" id="" placeholder="Username: ">
+
+            <input type="password" name="password" id="" placeholder="Password: ">
+
+            <input type="text" name="first name" id="" placeholder="First name: ">
+
+            <input type="text" name="last name" id="" placeholder="Last name ">
+
+            <button type="submit"> Register </button>
+
+        </form>
+    <ul>
+        <li><a href="{{ url_for('login') }}">Already have an account? Log in here!</a></li>
+    </ul>
+    </body>
+
+</html>
+
+{% endblock %}

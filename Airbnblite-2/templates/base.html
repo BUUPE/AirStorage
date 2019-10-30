@@ -1,0 +1,33 @@
+<html>
+
+    <head>
+
+        <title>{% block title %}{% endblock %} - Flaskr</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    </head>
+
+    <h1 style="color:red;"> AirbnbLite </h1>
+
+    {% with messages = get_flashed_messages() %}
+
+    {% if messages %}
+
+      <p style="font-weight: bold"> Alerts: </p>
+
+      <ul class=flashes>
+
+      {% for message in messages %}
+
+        <li>{{ message }}</li>
+
+      {% endfor %}
+
+      </ul>
+
+    {% endif %}
+
+  {% endwith %}
+
+  {% block body %}{% endblock %}
+
+</html>
